@@ -28,12 +28,14 @@ public class TestaListagem {
 
 		// Move o cursor uma linha para frente de sua posição atual
 		while (rst.next()) {
+			System.out.println("--------------------------------");
 			Integer id = rst.getInt("ID");
-			System.out.println(id);
+			System.out.println("Id: " + id);
 			String nome = rst.getString("NOME");
-			System.out.println(nome);
+			System.out.println("Nome: " + nome);
 			String descricao = rst.getString("DESCRICAO");
-			System.out.println(descricao);
+			System.out.println("Descrição: " + descricao);
+			System.out.println("--------------------------------");
 		}
 
 		connection.close();
